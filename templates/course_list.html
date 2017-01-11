@@ -1,0 +1,16 @@
+{% load static %}
+{% for Course in Courses %}
+     <div class="layer1">
+     <img src="{% static Course.picture %}" width="100" height="200" alt="" style="">
+     </div>
+     <p>
+     Название курса-{{ Course.duration }}<br><br><br>
+     Длительность курса-{{ Course.name }}<br><br><br>
+     Преподаватель-{{ Course.teacher }}<br><br><br>
+     Стоимость курса-{{ Course.value }}
+     <form  action="{{ Course.id }}" >
+         <button class="layer2">Подробнее</button>
+     </form>
+     </p>
+     <hr/>
+{% endfor %}
